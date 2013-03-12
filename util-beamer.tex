@@ -1,16 +1,15 @@
-\xdefinecolor{darkgreen}{rgb}{0,0.60,0}
+\usepackage{graphicx}
+\usepackage{beamerthemesplit} % new 
+\usetheme{Berlin}
+\usecolortheme{beaver}
+\usepackage{tikz}
+\usepackage{multimedia} %videos inside frame
 
+\xdefinecolor{darkgreen}{rgb}{0,0.60,0}
 \tikzset{zlevel/.style={%
 execute at begin scope={\pgfonlayer{#1}},
 execute at end scope={\endpgfonlayer}
 }}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% GENERAL VARIABLES
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\R{ \ensuremath{\mathcal{R}} }
-\def\C{ \ensuremath{\mathcal{C}} }
-\def\N{ \ensuremath{\mathcal{N}} }
-\def\SV{ \ensuremath{\mathcal{SV}} }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% SPECIAL BEAMER STYLES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -126,3 +125,48 @@ corners, ultra thick, minimum width=1cm, minimum height=0.2cm]
 	\end{tikzpicture}
 \end{center}
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% RED THEME WITH GREEN BUTTON LIKE TEXT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamercolor{alerted text}{fg=orange}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{block body alerted}{bg=normal text.bg!90!black}
+\setbeamercolor{block body}{bg=normal text.bg!90!black}
+\setbeamercolor{block body example}{bg=normal text.bg!90!black}
+\setbeamercolor{block title}{bg=blue}
+\setbeamercolor{fine separation line}{}
+\setbeamercolor{frametitle}{fg=black,bg=gray!30}
+\setbeamercolor{item projected}{fg=black}
+\setbeamercolor{normal text}{bg=black,fg=black}
+\setbeamercolor{palette sidebar primary}{use=normal text,fg=normal text.fg}
+\setbeamercolor{palette sidebar quaternary}{use=structure,fg=structure.fg}
+\setbeamercolor{palette sidebar secondary}{use=structure,fg=structure.fg}
+\setbeamercolor{palette sidebar tertiary}{use=normal text,fg=normal text.fg}
+\setbeamercolor{section in sidebar}{fg=black}
+\setbeamercolor{section in sidebar shaded}{fg= grey}
+\setbeamercolor{separation line}{}
+\setbeamercolor{sidebar}{bg=red}
+\setbeamercolor{sidebar}{parent=palette primary}
+\setbeamercolor{structure}{bg=black, fg=red}
+\setbeamercolor{subsection in sidebar}{fg=black}
+\setbeamercolor{subsection in sidebar shaded}{fg=grey}
+\setbeamercolor{title}{fg=black!100,bg=gray!30}
+\setbeamercolor{titlelike}{fg=brown}
+
+%several template parameters
+\setbeamertemplate{frametitle}[default][center]
+\setbeamertemplate{blocks}[rounded][shadow=true]
+%\beamertemplateshadingbackground{white!20}{black!20}
+\setbeamertemplate{background canvas}[vertical shading][bottom=white,top=white!25]
+\setbeamertemplate{sidebar canvas left}[horizontal shading][left=white!40!black,right=black]
+\setbeamercolor{footline in sidebar}{fg=black}%[page number]
+%\setbeamertemplate{footline}[frame number]
+
+%suppress navigational bar
+\beamertemplatenavigationsymbolsempty
+%experimental stuff
+\setbeamertemplate{title page}[default][rounded=true,shadow=true]
+\setlength{\unitlength}{\textwidth}
+
